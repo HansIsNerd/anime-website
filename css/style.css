@@ -4,9 +4,9 @@
 
 :root {
   /* Color Variables */
-  --secondary: #99a98f;
-  --primary: #c1d0b5;
-  --tersier: #fff8de;
+  --secondary: #8bf748;
+  --primary: #000;
+  --tersier: #ffd641;
 }
 
 *,
@@ -14,3 +14,9 @@ html {
   padding: 0;
   margin: 0;
 }
+
+.container {
+  height: auto;
+  width: auto;
+}
+
