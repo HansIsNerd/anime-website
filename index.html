@@ -1,26 +1,74 @@
+<!DOCTYPE html>
 <html lang="id">
   <head>
-    <title>X-1 Portal Web</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+
+    <!-- ====== BOXICONS ====== -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
+    <!-- ====== CSS ====== -->
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- navigation-section -->
-      <nav class="nav-container">
-        <ul class="nav-wrap-container">
-          <li class="nav-wrap"><a href="#" class="nav-link">Beranda</a></li>
-          <li class="nav-wrap"><a href="#" class="nav-link">Pengurus</a></li>
-          <li class="nav-wrap"><a href="#" class="nav-link">Anggota</a></li>
-          <li class="nav-wrap"><a href="#" class="nav-link">Informasi</a></li>
-          <li class="nav-wrap"><a href="#" class="nav-link">Perpustakaan</a></li>
-        </ul>
+    <!-- ====== HEADER ====== -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a class="nav__logoname">Exyone.io</a>
+        <div class="nav__menu" id="nav__menu">
+          <ul class="nav__list">
+
+            <li class="nav__item">
+              <a data-target="home__container" class="nav__link">
+                <i class="bx bx-home-smile nav__icon"></i>
+                <span class="nav__name">Beranda</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a data-target="pengurus__container" class="nav__link">
+                <i class="bx bx-user-pin nav__icon"></i>
+                <span class="nav__name">Pengurus</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a data-target="anggota__container" class="nav__link">
+                <i class="bx bx-group nav__icon"></i>
+                <span class="nav__name">Anggota</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <i class="bx bx-book-heart nav__icon"></i>
+                <span class="nav__name">Library</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
       </nav>
-    </div>
+    </header>
+    <main>
+      <section class="home__container" id="home__container">
+        <div class="home__items">
+          <div class="media__box">
+            <ul class="media__list">
+              <li class="media__item">
+                <a href="">
+                  <i class="bx bxl-instagram media__icon"></i>
+                  <span>Our Instagram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,166 @@
+/* ==== Google Fonts ==== */
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* ==== Variables ==== */
+:root {
+    --header-height: 3rem;
+    /* ==== Colors ==== */
+    --hue: 174;
+    --sat: 63%;
+
+    --primary-color: hsl(var(--hue), var(--sat), 40%);
+    --alt-primary: hsl(var(--hue), var(--sat), 36%);
+    --title-color: hsl(var(--hue), 12%, 15%);
+    --text-color: hsl(var(--hue), 8%, 35%);
+    --body-color: hsl(var(--hue), 100%, 99%);;
+    --container-color: #FFF;
+
+    /* ==== Font and typography */
+    --body-font: 'Open Sans', sans-serif;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: .983rem;
+    --tiny-font-size: .625rem;
+
+    /* ==== z-index ==== */
+    --z-tooltip-size: 10;
+    --z-fixed: 100;
+}
+
+/* ==== Responsive typography ==== */
+@media screen and (min-width: 968px) {
+    :root {
+        --h1-font-size: 2.25rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/* ==== Base ==== */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* ==== Reusable Classes ==== */
+.section {
+    padding: 4.5rem 0 2rem;
+}
+.section__title {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.section__height {
+    height: 100vh;
+}
+.args {
+    font-size: 1rem;
+}
+
+/* ==== Layout ==== */
+.container {
+    max-width: 968px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* ==== Header ==== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--container-color);
+    z-index: var(--z-fixed);
+    transition: .4s;
+}
+
+/* Nav */
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nav__logo */
+.nav__logoname {
+    color: var(--title-color);
+    font-family: Matemasie;
+    font-weight: 450;
+}
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: var(--container-color);
+        box-shadow: 0 -1px 12px hsla(var(--hue), --sat, 15%, 0.15);
+        width: 100%;
+        height: 4rem;
+        padding: 0 1rem;
+        display: grid;
+        align-content: center;
+        border-radius: 1.25rem 1.25rem 0 0;
+        transition: .4s;
+    }
+}
+
+.nav__list,
+.nav__link {
+    display: flex;
+}
+
+.nav__link {
+    flex-direction: column;
+    align-items: center;
+    row-gap: .25rem;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.nav__list {
+    justify-content: space-around;
+}
+.nav__name {
+    font-size: var(--tiny-font-size);
+}
+.nav__icon {
+    font-size: 1.5rem;
+}
+
+.active__link {
+    position: relative;
+    color: var(--primary-color);
+    transition: .3s;
+}
+.media_box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+#home__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
